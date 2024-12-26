@@ -171,11 +171,11 @@
 			};
 			buildConfigurationList = 2E8B4EA72D1C4D4900740CAE /* Build configuration list for PBXProject "Pdf Editor App" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ru,
 			);
 			mainGroup = 2E8B4EA32D1C4D4900740CAE;
 			productRefGroup = 2E8B4EAD2D1C4D4900740CAE /* Products */;

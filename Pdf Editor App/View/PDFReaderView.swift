@@ -12,7 +12,7 @@ struct PDFReaderView: View {
     var body: some View {
         VStack {
             Text("Просмотр PDF")
-                .font(.title)
+                .padding(.bottom)
             PDFKitRepresentedView(document: document.filePath)
                 .edgesIgnoringSafeArea(.all)
         }
