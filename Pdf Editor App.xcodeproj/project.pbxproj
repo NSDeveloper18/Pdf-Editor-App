@@ -22,6 +22,7 @@
 		2E8B4ED52D1D64D300740CAE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED42D1D64D300740CAE /* WelcomeView.swift */; };
 		2E8B4ED72D1D658300740CAE /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED62D1D658300740CAE /* Documents.swift */; };
 		2E8B4ED92D1D74B500740CAE /* hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED82D1D74B500740CAE /* hideKeyboard.swift */; };
+		2E8B4EDF2D1DA6B100740CAE /* PDFData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EDD2D1DA6B100740CAE /* PDFData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2E8B4ED42D1D64D300740CAE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		2E8B4ED62D1D658300740CAE /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		2E8B4ED82D1D74B500740CAE /* hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hideKeyboard.swift; sourceTree = "<group>"; };
+		2E8B4EDE2D1DA6B100740CAE /* PDFData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PDFData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2E8B4EC42D1D61D200740CAE /* PDFDocumentModel.swift */,
+				2E8B4EDD2D1DA6B100740CAE /* PDFData.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				2E8B4ECF2D1D633E00740CAE /* CreatePdfView.swift in Sources */,
 				2E8B4EC92D1D62D300740CAE /* ImagePicker.swift in Sources */,
 				2E8B4ED92D1D74B500740CAE /* hideKeyboard.swift in Sources */,
+				2E8B4EDF2D1DA6B100740CAE /* PDFData.xcdatamodeld in Sources */,
 				2E8B4EB02D1C4D4900740CAE /* Pdf_Editor_AppApp.swift in Sources */,
 				2E8B4EC52D1D61D200740CAE /* PDFDocumentModel.swift in Sources */,
 				2E8B4ED52D1D64D300740CAE /* WelcomeView.swift in Sources */,
@@ -441,6 +445,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E8B4EDD2D1DA6B100740CAE /* PDFData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E8B4EDE2D1DA6B100740CAE /* PDFData.xcdatamodel */,
+			);
+			currentVersion = 2E8B4EDE2D1DA6B100740CAE /* PDFData.xcdatamodel */;
+			path = PDFData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2E8B4EA42D1C4D4900740CAE /* Project object */;
 }

@@ -49,10 +49,7 @@ struct SavedDocumentsView: View {
                             }
                             Button("Удалить") {
                                 deleteFile(at: document.filePath)
-                                fileManager.savedDocuments.remove(at: index)
-                            }
-                            Button("Объединить") {
-                                isMerging = true
+//                                fileManager.savedDocuments.remove(at: index)
                             }
                         }
                     }
@@ -69,6 +66,23 @@ struct SavedDocumentsView: View {
             .sheet(isPresented: $isMerging) {
                 MergeDocumentsView()
             }
+            Button {
+                isMerging = true
+            } label: {
+                HStack {
+                    Spacer()
+                    Image(systemName: "plus.rectangle.fill.on.rectangle.fill")
+                        .foregroundColor(Color(.white))
+                    
+                    Text("Объединить")
+                        .foregroundColor(Color(.white))
+                    Spacer()
+                }
+                .padding()
+                .background(Color.blue)
+                .cornerRadius(10)
+            }
+            .padding(.horizontal)
             
             NavigationLink {
                 CreatePdfView()
@@ -86,7 +100,8 @@ struct SavedDocumentsView: View {
                 .background(Color.blue)
                 .cornerRadius(10)
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.bottom)
 
         }
         

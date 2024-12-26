@@ -13,6 +13,7 @@ struct MergeDocumentsView: View {
     @State private var selectedDocuments: [PDFDocumentModel] = []
     @State var name = ""
     @State var save = false
+    @State var lessAlert = false
     @FocusState var isKeyboardFocused: Bool
     var body: some View {
         VStack {
@@ -66,7 +67,12 @@ struct MergeDocumentsView: View {
             Spacer()
             
             Button(action: {
-                save = true
+                if selectedDocuments.count >= 2 {
+                    save = true
+                }
+                else {
+                    lessAlert = true
+                }
             }, label: {
                 HStack {
                     Spacer()
@@ -81,7 +87,10 @@ struct MergeDocumentsView: View {
             
             .alert("Введите имя для PDF файла", isPresented: $save, actions: {
                 TextField("Имя PDF-файла", text: $name)
-                Button("Ok", role: .cancel, action: {
+                Button("Отмена", role: .destructive, action: {
+                    
+                })
+                Button("Oк", role: .cancel, action: {
                     if let mergedURL = mergePDFs(documents: selectedDocuments, outputFileName: "\(name == "" ? "MergedDocument" : name).pdf") {
                         print("Merged document saved to \(mergedURL)")
                         dismiss()
@@ -92,6 +101,11 @@ struct MergeDocumentsView: View {
                 })
             })
             
+            .alert("Выберите как минимум 2 файлов", isPresented: $lessAlert, actions: {
+                Button("Oк", role: .cancel, action: {
+                    
+                })
+            })
         }
         .padding()
     }

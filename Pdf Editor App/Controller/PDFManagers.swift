@@ -10,20 +10,14 @@ import SwiftUI
 
 func generatePDF(from images: [UIImage], name: String) -> Bool {
     let pdfDocument = PDFDocument()
-    @ObservedObject var fileManagerClass: Documents = .shared
-    
     let a4PageWidth: CGFloat = 612
     let a4PageHeight: CGFloat = 792
     let a4PageSize = CGSize(width: a4PageWidth, height: a4PageHeight)
     
     for (index, image) in images.enumerated() {
-        // Scale the image to fit A4 dimensions
         let scaledImage = scaleImageToFitA4(image: image, pageSize: a4PageSize)
-        
-        // If the image is taller than one page, split it into multiple pages
         let pages = splitImageIntoPages(image: scaledImage, pageSize: a4PageSize)
         
-        // Add each page to the PDF
         for pageImage in pages {
             if let pdfPage = PDFPage(image: pageImage) {
                 pdfDocument.insert(pdfPage, at: pdfDocument.pageCount)
@@ -31,21 +25,32 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
         }
     }
     
-    // Generate the file path for the PDF
     let fileManager = FileManager.default
     let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
     let pdfPath = documentsPath.appendingPathComponent("\(name).pdf")
     let thumbnail = generateThumbnail(for: pdfDocument)
     
     if pdfDocument.write(to: pdfPath) {
-        fileManagerClass.savedDocuments.append(PDFDocumentModel(name: name, filePath: "\(pdfPath)", thumbnail: thumbnail))
-        print("PDF saved to \(pdfPath)")
-        return true
+        // Save to CoreData
+        let newDocument = PDFDocuments(context: Documents.shared.container.viewContext)
+        newDocument.name = name
+        newDocument.creationDate = Date()
+        newDocument.filePath = pdfPath.absoluteString
+        newDocument.thumbnail = thumbnail
+        
+        do {
+            try Documents.shared.container.viewContext.save()
+            Documents.shared.fetchSavedDocuments()  // Refresh the savedDocuments list
+            print("PDF saved to CoreData and file system")
+            return true
+        } catch {
+            print("Failed to save document to CoreData: \(error.localizedDescription)")
+            return false
+        }
     } else {
         print("Failed to save PDF")
         return false
     }
-    
 }
 
 // Helper function to scale an image to fit A4 dimensions

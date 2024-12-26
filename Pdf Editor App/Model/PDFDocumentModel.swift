@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PDFKit
 
 struct PDFDocumentModel: Identifiable, Equatable {
     var id: UUID = UUID()
@@ -14,6 +15,14 @@ struct PDFDocumentModel: Identifiable, Equatable {
     var filePath: String = ""
     var thumbnail: Data? = nil
     
+    init(from coreDataDocument: PDFDocuments) {
+        self.id = coreDataDocument.id ?? UUID()
+        self.name = coreDataDocument.name ?? ""
+        self.creationDate = coreDataDocument.creationDate ?? Date()
+        self.filePath = coreDataDocument.filePath ?? ""
+        self.thumbnail = coreDataDocument.thumbnail
+    }
+
     static func ==(lhs: PDFDocumentModel, rhs: PDFDocumentModel) -> Bool {
         return lhs.id == rhs.id
     }
