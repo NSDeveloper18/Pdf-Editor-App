@@ -44,7 +44,6 @@ struct MergeDocumentsView: View {
                             VStack(alignment: .leading) {
                                 Text(document.name)
                                     .font(.headline)
-//                                    .foregroundStyle(Color(.white))
                                 Spacer()
                                 Text("Дата: \(document.creationDate.formatted(.dateTime))")
                                     .font(.subheadline)
@@ -99,9 +98,9 @@ struct MergeDocumentsView: View {
     
     private func toggleDocumentSelection(_ document: PDFDocumentModel) {
         if let index = selectedDocuments.firstIndex(where: { $0.id == document.id }) {
-            selectedDocuments.remove(at: index) // Deselect the document
+            selectedDocuments.remove(at: index)
         } else {
-            selectedDocuments.append(document) // Select the document
+            selectedDocuments.append(document)
         }
     }
 }

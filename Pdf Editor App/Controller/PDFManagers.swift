@@ -11,7 +11,7 @@ import SwiftUI
 func generatePDF(from images: [UIImage], name: String) -> Bool {
     let pdfDocument = PDFDocument()
     @ObservedObject var fileManagerClass: Documents = .shared
-    // Define A4 page size in points (72 points per inch)
+    
     let a4PageWidth: CGFloat = 612
     let a4PageHeight: CGFloat = 792
     let a4PageSize = CGSize(width: a4PageWidth, height: a4PageHeight)
@@ -37,7 +37,6 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
     let pdfPath = documentsPath.appendingPathComponent("\(name).pdf")
     let thumbnail = generateThumbnail(for: pdfDocument)
     
-    // Save the PDF
     if pdfDocument.write(to: pdfPath) {
         fileManagerClass.savedDocuments.append(PDFDocumentModel(name: name, filePath: "\(pdfPath)", thumbnail: thumbnail))
         print("PDF saved to \(pdfPath)")

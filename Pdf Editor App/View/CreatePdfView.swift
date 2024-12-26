@@ -61,7 +61,6 @@ struct CreatePdfView: View {
             TextField("Имя PDF-файла", text: $name)
                 .padding()
                 .background(Color(.systemGray5))
-//                .foregroundColor(.white)
                 .cornerRadius(10)
                 .focused($isKeyboardFocused)
             
@@ -90,7 +89,7 @@ struct CreatePdfView: View {
                     Button {
                         if !images.isEmpty && name != "" {
                             saving = true
-                            saved = generatePDF(from: images, name: name)
+                            saved = generatePDF(from: images, name: "\(name).pdf")
                         }
                     } label: {
                         if saving {

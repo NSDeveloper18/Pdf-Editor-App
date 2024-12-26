@@ -53,7 +53,6 @@ struct SavedDocumentsView: View {
                             }
                             Button("Объединить") {
                                 isMerging = true
-                                //                        selectedDocument = document
                             }
                         }
                     }

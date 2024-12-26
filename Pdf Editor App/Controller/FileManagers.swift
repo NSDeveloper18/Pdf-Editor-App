@@ -63,6 +63,5 @@ func deleteFile(at filePath: String) {
         }
     } else {
         print("File not found, updating references.")
-        // Update your savedDocuments or app state to reflect this.
     }
 }

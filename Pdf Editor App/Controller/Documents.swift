@@ -6,11 +6,7 @@
 //
 
 import SwiftUI
-import UIKit
-import Foundation
-import PDFKit
 
-// MARK: - PDF File Manager
 class Documents: ObservableObject {
     static let shared = Documents()
     @Published var savedDocuments: [PDFDocumentModel] = []
