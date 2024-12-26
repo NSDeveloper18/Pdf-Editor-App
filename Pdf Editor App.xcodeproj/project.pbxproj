@@ -8,18 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		2E8B4EB02D1C4D4900740CAE /* Pdf_Editor_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EAF2D1C4D4900740CAE /* Pdf_Editor_AppApp.swift */; };
-		2E8B4EB22D1C4D4900740CAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EB12D1C4D4900740CAE /* ContentView.swift */; };
 		2E8B4EB42D1C4D4A00740CAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B4EB32D1C4D4A00740CAE /* Assets.xcassets */; };
 		2E8B4EB82D1C4D4A00740CAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B4EB72D1C4D4A00740CAE /* Preview Assets.xcassets */; };
+		2E8B4EC32D1D616100740CAE /* FileManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EC22D1D616000740CAE /* FileManagers.swift */; };
+		2E8B4EC52D1D61D200740CAE /* PDFDocumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EC42D1D61D200740CAE /* PDFDocumentModel.swift */; };
+		2E8B4EC72D1D61F200740CAE /* PDFManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EC62D1D61F200740CAE /* PDFManagers.swift */; };
+		2E8B4EC92D1D62D300740CAE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4EC82D1D62D300740CAE /* ImagePicker.swift */; };
+		2E8B4ECB2D1D62F400740CAE /* PDFKitRepresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ECA2D1D62F400740CAE /* PDFKitRepresentedView.swift */; };
+		2E8B4ECD2D1D632000740CAE /* PDFReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ECC2D1D632000740CAE /* PDFReaderView.swift */; };
+		2E8B4ECF2D1D633E00740CAE /* CreatePdfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ECE2D1D633E00740CAE /* CreatePdfView.swift */; };
+		2E8B4ED12D1D639800740CAE /* MergeDocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED02D1D639800740CAE /* MergeDocumentsView.swift */; };
+		2E8B4ED32D1D63CE00740CAE /* SavedDocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED22D1D63CE00740CAE /* SavedDocumentsView.swift */; };
+		2E8B4ED52D1D64D300740CAE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED42D1D64D300740CAE /* WelcomeView.swift */; };
+		2E8B4ED72D1D658300740CAE /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED62D1D658300740CAE /* Documents.swift */; };
+		2E8B4ED92D1D74B500740CAE /* hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B4ED82D1D74B500740CAE /* hideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E8B4EAC2D1C4D4900740CAE /* Pdf Editor App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pdf Editor App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8B4EAF2D1C4D4900740CAE /* Pdf_Editor_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pdf_Editor_AppApp.swift; sourceTree = "<group>"; };
-		2E8B4EB12D1C4D4900740CAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E8B4EB32D1C4D4A00740CAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E8B4EB52D1C4D4A00740CAE /* Pdf_Editor_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pdf_Editor_App.entitlements; sourceTree = "<group>"; };
 		2E8B4EB72D1C4D4A00740CAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E8B4EC22D1D616000740CAE /* FileManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagers.swift; sourceTree = "<group>"; };
+		2E8B4EC42D1D61D200740CAE /* PDFDocumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDocumentModel.swift; sourceTree = "<group>"; };
+		2E8B4EC62D1D61F200740CAE /* PDFManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFManagers.swift; sourceTree = "<group>"; };
+		2E8B4EC82D1D62D300740CAE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2E8B4ECA2D1D62F400740CAE /* PDFKitRepresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitRepresentedView.swift; sourceTree = "<group>"; };
+		2E8B4ECC2D1D632000740CAE /* PDFReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFReaderView.swift; sourceTree = "<group>"; };
+		2E8B4ECE2D1D633E00740CAE /* CreatePdfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePdfView.swift; sourceTree = "<group>"; };
+		2E8B4ED02D1D639800740CAE /* MergeDocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeDocumentsView.swift; sourceTree = "<group>"; };
+		2E8B4ED22D1D63CE00740CAE /* SavedDocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDocumentsView.swift; sourceTree = "<group>"; };
+		2E8B4ED42D1D64D300740CAE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		2E8B4ED62D1D658300740CAE /* Documents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
+		2E8B4ED82D1D74B500740CAE /* hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hideKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +75,10 @@
 			isa = PBXGroup;
 			children = (
 				2E8B4EAF2D1C4D4900740CAE /* Pdf_Editor_AppApp.swift */,
-				2E8B4EB12D1C4D4900740CAE /* ContentView.swift */,
+				2E8B4EC12D1D60C300740CAE /* Model */,
+				2E8B4EC02D1D60B600740CAE /* ViewModel */,
+				2E8B4EBF2D1D60A700740CAE /* View */,
+				2E8B4EBE2D1D609800740CAE /* Controller */,
 				2E8B4EB32D1C4D4A00740CAE /* Assets.xcassets */,
 				2E8B4EB52D1C4D4A00740CAE /* Pdf_Editor_App.entitlements */,
 				2E8B4EB62D1C4D4A00740CAE /* Preview Content */,
@@ -67,6 +92,46 @@
 				2E8B4EB72D1C4D4A00740CAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2E8B4EBE2D1D609800740CAE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B4EC22D1D616000740CAE /* FileManagers.swift */,
+				2E8B4EC62D1D61F200740CAE /* PDFManagers.swift */,
+				2E8B4EC82D1D62D300740CAE /* ImagePicker.swift */,
+				2E8B4ED62D1D658300740CAE /* Documents.swift */,
+				2E8B4ED82D1D74B500740CAE /* hideKeyboard.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E8B4EBF2D1D60A700740CAE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B4ED42D1D64D300740CAE /* WelcomeView.swift */,
+				2E8B4ED22D1D63CE00740CAE /* SavedDocumentsView.swift */,
+				2E8B4ECC2D1D632000740CAE /* PDFReaderView.swift */,
+				2E8B4ECE2D1D633E00740CAE /* CreatePdfView.swift */,
+				2E8B4ED02D1D639800740CAE /* MergeDocumentsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E8B4EC02D1D60B600740CAE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B4ECA2D1D62F400740CAE /* PDFKitRepresentedView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2E8B4EC12D1D60C300740CAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B4EC42D1D61D200740CAE /* PDFDocumentModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +204,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8B4EB22D1C4D4900740CAE /* ContentView.swift in Sources */,
+				2E8B4EC72D1D61F200740CAE /* PDFManagers.swift in Sources */,
+				2E8B4EC32D1D616100740CAE /* FileManagers.swift in Sources */,
+				2E8B4ED72D1D658300740CAE /* Documents.swift in Sources */,
+				2E8B4ECF2D1D633E00740CAE /* CreatePdfView.swift in Sources */,
+				2E8B4EC92D1D62D300740CAE /* ImagePicker.swift in Sources */,
+				2E8B4ED92D1D74B500740CAE /* hideKeyboard.swift in Sources */,
 				2E8B4EB02D1C4D4900740CAE /* Pdf_Editor_AppApp.swift in Sources */,
+				2E8B4EC52D1D61D200740CAE /* PDFDocumentModel.swift in Sources */,
+				2E8B4ED52D1D64D300740CAE /* WelcomeView.swift in Sources */,
+				2E8B4ED32D1D63CE00740CAE /* SavedDocumentsView.swift in Sources */,
+				2E8B4ECD2D1D632000740CAE /* PDFReaderView.swift in Sources */,
+				2E8B4ED12D1D639800740CAE /* MergeDocumentsView.swift in Sources */,
+				2E8B4ECB2D1D62F400740CAE /* PDFKitRepresentedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +350,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -282,20 +360,21 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pdf.editor.app.Pdf-Editor-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +391,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PDF App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -320,20 +401,21 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pdf.editor.app.Pdf-Editor-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
