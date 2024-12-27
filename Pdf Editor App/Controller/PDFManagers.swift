@@ -54,7 +54,9 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
         do {
             try Documents.shared.container.viewContext.save()
             Documents.shared.fetchSavedDocuments()  // Refresh the savedDocuments list
+#if DEBUG
             print("PDF saved to CoreData and file system at path: \(pdfPath)")
+#endif
             return true
         } catch {
             print("Failed to save document to CoreData: \(error.localizedDescription)")

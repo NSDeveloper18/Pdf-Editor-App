@@ -9,7 +9,7 @@ import SwiftUI
 import PDFKit
 import CoreData
 
-class AppPathHelper {
+final class AppPathHelper {
     static func getBasePath() -> String {
         // Retrieve the application's base path
         let basePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -24,7 +24,7 @@ func mergePDFs(documents: [PDFDocumentModel], outputFileName: String) -> URL? {
     let basePath = AppPathHelper.getBasePath()
     for document in documents {
         if let pdfDocument = PDFDocument(url: URL(string: "\(basePath)PDFs/\(document.filePath)")!) {
-            print("mergePDFs: \(basePath)PDFs/\(document.filePath)")
+            
             for pageIndex in 0..<pdfDocument.pageCount {
                 if let page = pdfDocument.page(at: pageIndex) {
                     mergedPDF.insert(page, at: mergedPDF.pageCount)
@@ -46,7 +46,6 @@ func saveMergedPDF(to fileName: String, document: PDFDocument) -> URL? {
     let pdfPath = URL(string: "\(basePath)PDFs/\(fileName)")!
 
     if document.write(to: pdfPath) {
-        print("PDF saved to \(pdfPath)")
         
         // Save to CoreData
         let newDocument = PDFDocuments(context: Documents.shared.container.viewContext)
@@ -80,8 +79,10 @@ func deleteFile(at filePath: String) {
     if FileManager.default.fileExists(atPath: fileURL.path) {
         do {
             try FileManager.default.removeItem(at: fileURL)
-            print("Successfully deleted file at \(fileURL.path)")
             
+#if DEBUG
+            print("Successfully deleted file at \(fileURL.path)")
+#endif
             // Remove from CoreData by filePath
             if let document = Documents.shared.savedDocuments.first(where: { $0.filePath == filePath }) {
                 // Find the Core Data object based on filePath

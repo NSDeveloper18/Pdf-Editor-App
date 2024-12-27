@@ -15,7 +15,6 @@ struct PDFKitRepresentedView: UIViewRepresentable {
         let pdfView = PDFView()
         pdfView.autoScales = true
         if let url = URL(string: "\(basePath)PDFs/\(document)") {
-            print("PDFKitRepresentedView: \(url)")
             pdfView.document = PDFDocument(url: url)
         }
         return pdfView

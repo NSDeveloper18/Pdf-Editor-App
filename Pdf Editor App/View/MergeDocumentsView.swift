@@ -92,7 +92,6 @@ struct MergeDocumentsView: View {
                 })
                 Button("Oк", role: .cancel, action: {
                     if let mergedURL = mergePDFs(documents: selectedDocuments, outputFileName: "\(name == "" ? "MergedDocument" : name).pdf") {
-                        print("Merged document saved to \(mergedURL)")
                         dismiss()
                     } else {
                         print("Failed to merge documents")
