@@ -1,4 +1,4 @@
-Менеджер PDF-документов для iOS
+![telegram-cloud-photo-size-2-5436118374468937363-y](https://github.com/user-attachments/assets/ab0a0610-e0e7-4cb9-a1e7-28913824bcca)Менеджер PDF-документов для iOS
 Обзор
 Это iOS-приложение позволяет пользователям управлять PDF-документами: добавлять фотографии из галереи, конвертировать их в PDF-формат, просматривать, делиться и удалять документы. Оно предлагает интуитивно понятный интерфейс, созданный с использованием SwiftUI, и следует архитектуре MVVM. Приложение поддерживает сохранение и взаимодействие с несколькими документами, с возможностью их объединения и отправки другим пользователям.
 
@@ -26,6 +26,8 @@
 Минимальная поддерживаемая версия — iOS 15.
 UI-фреймворк: SwiftUI.
 
-![telegram-cloud-photo-size-2-5436039076487755701-y](https://github.com/user-attachments/assets/170abaaf-9a3c-4d9b-b1eb-ad18705e4733)
-![telegram-cloud-photo-size-2-5436039076487755736-y](https://github.com/user-attachments/assets/d57df475-1890-49be-b01b-1f2fb0e22bd5)
-![telegram-cloud-photo-size-2-5436039076487755735-y](https://github.com/user-attachments/assets/32e3de5f-b44b-44dc-87b9-4e45e042b345)
+Скриншоты:
+![telegram-cloud-photo-size-2-5436118374468937365-y](https://github.com/user-attachments/assets/448e2a65-23d9-4e6e-b7ad-b3e4fb8e2167)
+![telegram-cloud-photo-size-2-5436118374468937364-y](https://github.com/user-attachments/assets/d17cd042-5087-494c-b318-967c7507e8f8)
+![telegram-cloud-photo-size-2-5436118374468937363-y](https://github.com/user-attachments/assets/70d25585-1ee2-4466-83b9-69f66fe88145)
+
