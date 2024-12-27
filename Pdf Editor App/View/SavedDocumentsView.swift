@@ -53,6 +53,18 @@ struct SavedDocumentsView: View {
                             }
                         }
                     }
+                    .swipeActions(edge: .trailing) {
+                        Button("Удалить") {
+                            deleteFile(at: document.filePath)
+                        }
+                        .tint(.red)
+                    }
+                    .swipeActions(edge: .leading) {
+                        Button("Поделиться") {
+                            shareDocument(document)
+                        }
+                        .tint(.blue)
+                    }
                 }
             }
             .navigationTitle("Сохраненные документы")
