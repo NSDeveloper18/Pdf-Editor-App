@@ -26,7 +26,6 @@
 Минимальная поддерживаемая версия — iOS 15.
 UI-фреймворк: SwiftUI.
 
-Скриншоты:
 ![telegram-cloud-photo-size-2-5436118374468937365-y](https://github.com/user-attachments/assets/448e2a65-23d9-4e6e-b7ad-b3e4fb8e2167)
 ![telegram-cloud-photo-size-2-5436118374468937364-y](https://github.com/user-attachments/assets/d17cd042-5087-494c-b318-967c7507e8f8)
 ![telegram-cloud-photo-size-2-5436118374468937363-y](https://github.com/user-attachments/assets/70d25585-1ee2-4466-83b9-69f66fe88145)
