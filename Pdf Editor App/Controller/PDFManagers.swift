@@ -27,7 +27,20 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
     
     let fileManager = FileManager.default
     let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let pdfPath = documentsPath.appendingPathComponent("\(name).pdf")
+    let pdfDirectory = documentsPath.appendingPathComponent("PDFs")
+    
+    // Create the "PDFs" directory if it doesn't exist
+    if !fileManager.fileExists(atPath: pdfDirectory.path) {
+        do {
+            try fileManager.createDirectory(at: pdfDirectory, withIntermediateDirectories: true, attributes: nil)
+        } catch {
+            print("Failed to create directory for PDFs: \(error.localizedDescription)")
+            return false
+        }
+    }
+    
+    // Use a consistent file name
+    let pdfPath = pdfDirectory.appendingPathComponent("\(name).pdf")
     let thumbnail = generateThumbnail(for: pdfDocument)
     
     if pdfDocument.write(to: pdfPath) {
@@ -35,13 +48,13 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
         let newDocument = PDFDocuments(context: Documents.shared.container.viewContext)
         newDocument.name = name
         newDocument.creationDate = Date()
-        newDocument.filePath = pdfPath.absoluteString
+        newDocument.filePath = "\(name).pdf"
         newDocument.thumbnail = thumbnail
         
         do {
             try Documents.shared.container.viewContext.save()
             Documents.shared.fetchSavedDocuments()  // Refresh the savedDocuments list
-            print("PDF saved to CoreData and file system")
+            print("PDF saved to CoreData and file system at path: \(pdfPath)")
             return true
         } catch {
             print("Failed to save document to CoreData: \(error.localizedDescription)")
@@ -52,6 +65,7 @@ func generatePDF(from images: [UIImage], name: String) -> Bool {
         return false
     }
 }
+
 
 // Helper function to scale an image to fit A4 dimensions
 func scaleImageToFitA4(image: UIImage, pageSize: CGSize) -> UIImage {

@@ -9,11 +9,22 @@ import SwiftUI
 import PDFKit
 import CoreData
 
+class AppPathHelper {
+    static func getBasePath() -> String {
+        // Retrieve the application's base path
+        let basePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        // Extract the parent directory of the document directory
+        let applicationBasePath = basePath
+        return applicationBasePath.absoluteString
+    }
+}
+
 func mergePDFs(documents: [PDFDocumentModel], outputFileName: String) -> URL? {
     let mergedPDF = PDFDocument()
-    
+    let basePath = AppPathHelper.getBasePath()
     for document in documents {
-        if let pdfDocument = PDFDocument(url: URL(string: document.filePath)!) {
+        if let pdfDocument = PDFDocument(url: URL(string: "\(basePath)PDFs/\(document.filePath)")!) {
+            print("mergePDFs: \(basePath)PDFs/\(document.filePath)")
             for pageIndex in 0..<pdfDocument.pageCount {
                 if let page = pdfDocument.page(at: pageIndex) {
                     mergedPDF.insert(page, at: mergedPDF.pageCount)
@@ -29,9 +40,10 @@ func mergePDFs(documents: [PDFDocumentModel], outputFileName: String) -> URL? {
 }
 
 func saveMergedPDF(to fileName: String, document: PDFDocument) -> URL? {
-    let fileManager = FileManager.default
-    guard let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-    let pdfPath = documentsPath.appendingPathComponent(fileName)
+//    let fileManager = FileManager.default
+//    guard let documentsPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+    let basePath = AppPathHelper.getBasePath()
+    let pdfPath = URL(string: "\(basePath)PDFs/\(fileName)")!
 
     if document.write(to: pdfPath) {
         print("PDF saved to \(pdfPath)")
@@ -40,7 +52,7 @@ func saveMergedPDF(to fileName: String, document: PDFDocument) -> URL? {
         let newDocument = PDFDocuments(context: Documents.shared.container.viewContext)
         newDocument.name = fileName
         newDocument.creationDate = Date()
-        newDocument.filePath = pdfPath.absoluteString
+        newDocument.filePath = "\(fileName)"
         newDocument.thumbnail = generateThumbnail(for: document)
         
         do {
@@ -58,8 +70,10 @@ func saveMergedPDF(to fileName: String, document: PDFDocument) -> URL? {
 }
 
 func deleteFile(at filePath: String) {
-    guard let fileURL = URL(string: filePath) else {
-        print("Invalid file path: \(filePath)")
+    let basePath = AppPathHelper.getBasePath()
+    let filePaths = "\(basePath)PDFs/\(filePath)"
+    guard let fileURL = URL(string: filePaths) else {
+        print("Invalid file path: \(filePaths)")
         return
     }
 

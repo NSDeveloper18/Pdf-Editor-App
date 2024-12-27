@@ -10,11 +10,12 @@ import PDFKit
 
 struct PDFKitRepresentedView: UIViewRepresentable {
     let document: String
-
+    let basePath = AppPathHelper.getBasePath()
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
         pdfView.autoScales = true
-        if let url = URL(string: document) {
+        if let url = URL(string: "\(basePath)PDFs/\(document)") {
+            print("PDFKitRepresentedView: \(url)")
             pdfView.document = PDFDocument(url: url)
         }
         return pdfView

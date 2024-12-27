@@ -108,7 +108,8 @@ struct SavedDocumentsView: View {
     }
 
     func shareDocument(_ document: PDFDocumentModel) {
-        let url = URL(fileURLWithPath: document.filePath)
+        let basePath = AppPathHelper.getBasePath()
+        let url = URL(fileURLWithPath: "\(basePath)PDFs/\(document.filePath)")
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true)
     }
